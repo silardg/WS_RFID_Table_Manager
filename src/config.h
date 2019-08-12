@@ -15,3 +15,6 @@ const int PIN_RST_RFID = 8;                 // RFID RST pin
 
 /* PROJECT DEFINES */
 const int num_per_table = 5;                // number of leds per table
+
+/* DISPLAY DEFINES */
+// place your display defines here
