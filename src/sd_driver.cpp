@@ -1,5 +1,6 @@
 #include "sd_driver.h"
 #include "config.h"
+#include "display.h"
 
 File root;
 File myFile;
@@ -75,6 +76,9 @@ int get_table_num(String card_uid) {
       input_processing = myFile.readStringUntil('\n');      // read new line
       String name_user(find_data(input_processing));        // get the uid
       if(name_user == card_uid) {                           // compare
+
+        display_show(String(current_familyname), String(current_uid), current_tableid);
+
         return current_tableid;                             // return if the same
       }
 
